@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c840378c-7e1e-45ec-a515-a9ce0312a1f7" name="Changes" comment="Setup connection to Postgres.">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +54,7 @@
       <updated>1697980239894</updated>
       <workItem from="1697980240997" duration="604000" />
       <workItem from="1697980865911" duration="1143000" />
-      <workItem from="1697982035506" duration="3414000" />
+      <workItem from="1697982035506" duration="3779000" />
     </task>
     <task id="LOCAL-00001" summary="Setup connection to Postgres.">
       <option name="closed" value="true" />
