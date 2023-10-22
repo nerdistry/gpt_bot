@@ -1,6 +1,6 @@
-'''
+"""
 A utility script to set up sending a WhatsApp message through the Twilio Messaging API.
-'''
+"""
 
 # Standard library import
 import logging
