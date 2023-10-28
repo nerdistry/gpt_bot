@@ -22,13 +22,26 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Sending message logic through Twilio Messaging API
-def send_message(to_number, body_text):
+def send_message(to_number, body_text=None, media_url=None):
     try:
-        message = client.messages.create(
-            from_=f"whatsapp:{twilio_number}",
-            body=body_text,
-            to=f"whatsapp:{to_number}"
+        if media_url:
+            message = client.messages.create(
+                from_=f"whatsapp:{twilio_number}",
+                media_url=[media_url],
+                to=f"whatsapp:{to_number}"
             )
-        logger.info(f"Message sent to {to_number}: {message.body}")
+            print("Twilio Response:", message)
+            logger.info(f"Media message sent to {to_number}: {message.sid}")
+        elif body_text:
+            message = client.messages.create(
+                from_=f"whatsapp:{twilio_number}",
+                body=body_text,
+                to=f"whatsapp:{to_number}"
+            )
+            logger.info(f"Text message sent to {to_number}: {message.body}")
+        else:
+            logger.warning("No text or media URL provided for message.")
+            return
+
     except Exception as e:
         logger.error(f"Error sending message to {to_number}: {e}")

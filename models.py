@@ -9,7 +9,7 @@ url = URL.create(
     username=config("DB_USER"),
     password=config("DB_PASSWORD"),
     host="localhost",
-    database="chatgpt_whatsapp",
+    database="gpt_bot",
     port=5432
 )
 
@@ -18,7 +18,7 @@ SessionLocal = sessionmaker(bind=engine)
 Base = declarative_base()
 
 class Conversation(Base):
-    __tablename__ = "gpt_conversations"
+    __tablename__ = "gpt_conversation"
 
     id = Column(Integer, primary_key=True, index=True)
     sender = Column(String)
